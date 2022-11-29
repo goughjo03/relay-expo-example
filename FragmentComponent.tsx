@@ -7,6 +7,7 @@ import { Text, View } from "react-native";
 export const fragment = graphql`
   fragment FragmentComponent_country on Country {
     phone
+    currency
     continent {
       name
     }
@@ -23,6 +24,7 @@ const FragmentComponent = ({ country }: Props) => {
     <View>
       <Text>{data.continent.name}</Text>
       <Text>{data.phone}</Text>
+      <Text>{data.currency}</Text>
     </View>
   );
 };
