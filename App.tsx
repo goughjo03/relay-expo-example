@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { RelayEnvironmentProvider } from "react-relay";
 import { Store, Network, Environment, RecordSource } from "relay-runtime";
 import QueryLoaderComponent from "./QueryLoaderComponent";
@@ -34,12 +32,3 @@ export default function App() {
     </RelayEnvironmentProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
