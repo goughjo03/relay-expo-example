@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { RelayEnvironmentProvider } from "react-relay";
+import { Store, Network, Environment, RecordSource } from "relay-runtime";
+import QueryLoaderComponent from "./QueryLoaderComponent";
+
+const fetchQuery = async (operation: any, variables: any) => {
+  const response = await fetch(
+    "https://api.graph.cool/relay/v1/cjv0q2q0q0j2o0123j2q0q0j2o",
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: operation.text,
+        variables,
+      }),
+    }
+  );
+  return await response.json();
+};
+
+const environment = new Environment({
+  network: Network.create(fetchQuery),
+  store: new Store(new RecordSource()),
+});
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RelayEnvironmentProvider environment={environment}>
+      <QueryLoaderComponent />
+    </RelayEnvironmentProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
