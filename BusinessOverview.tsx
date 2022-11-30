@@ -8,7 +8,7 @@ type Props = {
   business: PreloadedQuery<BusinessOverviewQuery>;
 };
 
-const query = graphql`
+export const query = graphql`
   query BusinessOverviewQuery($id: ID!) {
     business(id: $id) {
       name
