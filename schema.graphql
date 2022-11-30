@@ -74,6 +74,7 @@ type Query {
   languages(filter: LanguageFilterInput): [Language!]!
   language(code: ID!): Language
   user: User
+  business(id: ID!): Business!
 }
 
 union _Entity = Country | Continent | Language
@@ -88,4 +89,9 @@ type _Service {
 type User {
   name: String!
   profilePicture: String!
+}
+
+type Business {
+  owner: User!
+  name: String!
 }

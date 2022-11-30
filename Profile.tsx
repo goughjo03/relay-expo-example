@@ -10,24 +10,6 @@ const fragment = graphql`
   }
 `;
 
-const mutation = graphql`
-  mutation ProfileUpdateNameMutation($input: UpdateNameInput!) {
-    updateName(input: $input) {
-      user {
-        ...Profile_user
-      }
-    }
-  }
-`;
-
-const subscription = graphql`
-  subscription ProfileSubscription {
-    userUpdated {
-      ...Profile_user
-    }
-  }
-`;
-
 type Props = {
   user: Profile_user$key;
 };
