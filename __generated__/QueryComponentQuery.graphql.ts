@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<b15c23531628ccf685ac33033bc635fc>>
+ * @generated SignedSource<<34e2187a098761f6c34444e0ffa58ad9>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -106,6 +106,13 @@ return {
           {
             "alias": null,
             "args": null,
+            "kind": "ScalarField",
+            "name": "currency",
+            "storageKey": null
+          },
+          {
+            "alias": null,
+            "args": null,
             "concreteType": "Continent",
             "kind": "LinkedField",
             "name": "continent",
@@ -121,12 +128,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "439c693294a52d2674fa0df120d4d1bb",
+    "cacheID": "65b6426917364310414aec203f89ed7e",
     "id": null,
     "metadata": {},
     "name": "QueryComponentQuery",
     "operationKind": "query",
-    "text": "query QueryComponentQuery(\n  $id: ID!\n) {\n  country(code: $id) {\n    name\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  capital\n  continent {\n    name\n  }\n}\n"
+    "text": "query QueryComponentQuery(\n  $id: ID!\n) {\n  country(code: $id) {\n    name\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  capital\n  currency\n  continent {\n    name\n  }\n}\n"
   }
 };
 })();

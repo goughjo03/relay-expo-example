@@ -9,7 +9,6 @@ export const fragment = graphql`
     phone
     capital
     currency
-    setsetgser
     continent {
       name
     }
