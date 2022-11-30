@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<668acb976035b279632b3e90dad6228e>>
+ * @generated SignedSource<<d7a392727b2e61f4c40e24c8bc3a2e80>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -87,7 +87,7 @@ return {
             "alias": null,
             "args": null,
             "kind": "ScalarField",
-            "name": "currency",
+            "name": "capital",
             "storageKey": null
           },
           {
@@ -114,7 +114,7 @@ return {
     ]
   },
   "params": {
-    "cacheID": "c5eb0f66def4e6cefaa13c17b54ff298",
+    "cacheID": "27c60f337a16944c86568d8bf9ca9b68",
     "id": null,
     "metadata": {
       "relayTestingSelectionTypeInfo": {
@@ -124,6 +124,12 @@ return {
           "plural": false,
           "type": "Country"
         },
+        "myData.capital": {
+          "enumValues": null,
+          "nullable": true,
+          "plural": false,
+          "type": "String"
+        },
         "myData.continent": {
           "enumValues": null,
           "nullable": false,
@@ -131,18 +137,12 @@ return {
           "type": "Continent"
         },
         "myData.continent.name": (v1/*: any*/),
-        "myData.currency": {
-          "enumValues": null,
-          "nullable": true,
-          "plural": false,
-          "type": "String"
-        },
         "myData.phone": (v1/*: any*/)
       }
     },
     "name": "FragmentComponentQuery",
     "operationKind": "query",
-    "text": "query FragmentComponentQuery {\n  myData: country(code: \"test-id\") {\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  currency\n  continent {\n    name\n  }\n}\n"
+    "text": "query FragmentComponentQuery {\n  myData: country(code: \"test-id\") {\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  capital\n  continent {\n    name\n  }\n}\n"
   }
 };
 })();

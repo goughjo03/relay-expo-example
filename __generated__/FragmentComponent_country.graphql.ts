@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<d882986289e636bf436c6525dbcd2e76>>
+ * @generated SignedSource<<200e1ae22bad197c58d5578d34e2e44c>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -11,10 +11,10 @@
 import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
 export type FragmentComponent_country$data = {
+  readonly capital: string | null;
   readonly continent: {
     readonly name: string;
   };
-  readonly currency: string | null;
   readonly phone: string;
   readonly " $fragmentType": "FragmentComponent_country";
 };
@@ -40,7 +40,7 @@ const node: ReaderFragment = {
       "alias": null,
       "args": null,
       "kind": "ScalarField",
-      "name": "currency",
+      "name": "capital",
       "storageKey": null
     },
     {
@@ -66,6 +66,6 @@ const node: ReaderFragment = {
   "abstractKey": null
 };
 
-(node as any).hash = "1cebfe3477b812dc8cd6ea13bd1a508d";
+(node as any).hash = "52c07b9ab218e7e1f65cd9d861d9ca6b";
 
 export default node;
