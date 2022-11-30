@@ -69,10 +69,10 @@ describe("FragmentComponent", () => {
           Country() {
             return {
               phone: "123456789",
-              // currency: "USD",
-              // continent: {
-              //   name: "Europe",
-              // },
+              currency: "USD",
+              continent: {
+                name: "Europe",
+              },
             };
           },
         })
