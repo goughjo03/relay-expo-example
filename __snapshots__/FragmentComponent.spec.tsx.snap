@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FragmentComponent renders correctly with automatically generated data 1`] = `
+<View>
+  <Text>
+    &lt;mock-value-for-field-"name"&gt;
+  </Text>
+  <Text>
+    &lt;mock-value-for-field-"phone"&gt;
+  </Text>
+  <Text>
+    &lt;mock-value-for-field-"currency"&gt;
+  </Text>
+</View>
+`;
+
+exports[`FragmentComponent renders correctly with specifically generated data 1`] = `
+<View>
+  <Text>
+    Europe
+  </Text>
+  <Text>
+    123456789
+  </Text>
+  <Text>
+    USD
+  </Text>
+</View>
+`;
