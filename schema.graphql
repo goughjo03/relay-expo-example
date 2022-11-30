@@ -73,6 +73,7 @@ type Query {
   continent(code: ID!): Continent
   languages(filter: LanguageFilterInput): [Language!]!
   language(code: ID!): Language
+  user: User
 }
 
 union _Entity = Country | Continent | Language
@@ -82,4 +83,9 @@ scalar _Any
 type _Service {
   # The sdl representing the federated service capabilities. Includes federation directives, removes federation types, and includes rest of full schema after schema directives have been applied
   sdl: String
+}
+
+type User {
+  name: String!
+  profilePicture: String!
 }

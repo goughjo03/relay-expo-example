@@ -45,7 +45,7 @@ describe("FragmentComponent", () => {
     const TestRenderer = () => {
       const data = useLazyLoadQuery(
         graphql`
-          query FragmentComponentQuery @relay_test_operation {
+          query FragmentComponentTwoQuery @relay_test_operation {
             myData: country(code: "test-id") {
               # Spread the fragment you want to test here
               ...FragmentComponent_country
