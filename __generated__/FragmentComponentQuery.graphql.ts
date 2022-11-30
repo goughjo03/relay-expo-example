@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<bb14bda879c4b47753e6a70f8e3abad6>>
+ * @generated SignedSource<<6173bc64a8633e7074a36daaddb79057>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -30,12 +30,6 @@ var v0 = [
   }
 ],
 v1 = {
-  "enumValues": null,
-  "nullable": true,
-  "plural": false,
-  "type": "String"
-},
-v2 = {
   "enumValues": null,
   "nullable": false,
   "plural": false,
@@ -92,20 +86,6 @@ return {
           {
             "alias": null,
             "args": null,
-            "kind": "ScalarField",
-            "name": "capital",
-            "storageKey": null
-          },
-          {
-            "alias": null,
-            "args": null,
-            "kind": "ScalarField",
-            "name": "currency",
-            "storageKey": null
-          },
-          {
-            "alias": null,
-            "args": null,
             "concreteType": "Continent",
             "kind": "LinkedField",
             "name": "continent",
@@ -127,7 +107,7 @@ return {
     ]
   },
   "params": {
-    "cacheID": "398ec88e7a5c174173197558a3c94c84",
+    "cacheID": "5b3c6bf50b103f4432007a3a86349abc",
     "id": null,
     "metadata": {
       "relayTestingSelectionTypeInfo": {
@@ -137,21 +117,19 @@ return {
           "plural": false,
           "type": "Country"
         },
-        "myData.capital": (v1/*: any*/),
         "myData.continent": {
           "enumValues": null,
           "nullable": false,
           "plural": false,
           "type": "Continent"
         },
-        "myData.continent.name": (v2/*: any*/),
-        "myData.currency": (v1/*: any*/),
-        "myData.phone": (v2/*: any*/)
+        "myData.continent.name": (v1/*: any*/),
+        "myData.phone": (v1/*: any*/)
       }
     },
     "name": "FragmentComponentQuery",
     "operationKind": "query",
-    "text": "query FragmentComponentQuery {\n  myData: country(code: \"test-id\") {\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  capital\n  currency\n  continent {\n    name\n  }\n}\n"
+    "text": "query FragmentComponentQuery {\n  myData: country(code: \"test-id\") {\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  continent {\n    name\n  }\n}\n"
   }
 };
 })();

@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<34e2187a098761f6c34444e0ffa58ad9>>
+ * @generated SignedSource<<323864dcb8aecfdf6896dab5e71c6572>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -99,20 +99,6 @@ return {
           {
             "alias": null,
             "args": null,
-            "kind": "ScalarField",
-            "name": "capital",
-            "storageKey": null
-          },
-          {
-            "alias": null,
-            "args": null,
-            "kind": "ScalarField",
-            "name": "currency",
-            "storageKey": null
-          },
-          {
-            "alias": null,
-            "args": null,
             "concreteType": "Continent",
             "kind": "LinkedField",
             "name": "continent",
@@ -128,12 +114,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "65b6426917364310414aec203f89ed7e",
+    "cacheID": "12fa3f50e30a6b09df130975c97c7f67",
     "id": null,
     "metadata": {},
     "name": "QueryComponentQuery",
     "operationKind": "query",
-    "text": "query QueryComponentQuery(\n  $id: ID!\n) {\n  country(code: $id) {\n    name\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  capital\n  currency\n  continent {\n    name\n  }\n}\n"
+    "text": "query QueryComponentQuery(\n  $id: ID!\n) {\n  country(code: $id) {\n    name\n    ...FragmentComponent_country\n  }\n}\n\nfragment FragmentComponent_country on Country {\n  phone\n  continent {\n    name\n  }\n}\n"
   }
 };
 })();

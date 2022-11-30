@@ -8,12 +8,6 @@ exports[`FragmentComponent renders correctly with automatically generated data 1
   <Text>
     &lt;mock-value-for-field-"phone"&gt;
   </Text>
-  <Text>
-    &lt;mock-value-for-field-"capital"&gt;
-  </Text>
-  <Text>
-    &lt;mock-value-for-field-"currency"&gt;
-  </Text>
 </View>
 `;
 
@@ -24,12 +18,6 @@ exports[`FragmentComponent renders correctly with specifically generated data 1`
   </Text>
   <Text>
     123456789
-  </Text>
-  <Text>
-    &lt;mock-value-for-field-"capital"&gt;
-  </Text>
-  <Text>
-    USD
   </Text>
 </View>
 `;
